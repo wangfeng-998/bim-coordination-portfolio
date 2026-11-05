@@ -1,3 +1,5 @@
+> [English](clash-report-template.md) | 中文
+
 # 碰撞检测报告模板
 
 > 用法：每轮检测复制一份，改名 `碰撞报告_YYYYMMDD_第N轮.md`，按实际结果填充。报告只写"看得懂、能照着改"的信息。

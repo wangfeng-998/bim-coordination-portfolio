@@ -1,98 +1,103 @@
+> English | [中文](README.zh-CN.md)
+
 # bim-coordination-portfolio
 
-BIM 机电协调（MEP Coordination）作品集：一栋**自选小型公共建筑**，从建筑 LOD300 建模到机电管线综合、Navisworks 碰撞检测与整改闭环，全过程留痕。
+BIM MEP coordination portfolio: one **self-selected small public building**, documented end to end — from architectural LOD300 modeling through coordinated MEP services, Navisworks clash detection and the remediation loop.
 
-> 个人作品集项目，用于展示「建模 → 协调 → 出报告 → 复检」的完整工作流，而不是只放几张效果图。
+> A personal portfolio project, meant to show the full "model → coordinate → report → re-check" workflow rather than a handful of renderings.
 >
-> 仓库只放文字、截图与脱敏报告。**Revit 模型、Navisworks 文件不入库**（体积大且无版本意义），需要时另附网盘链接。
+> The repository holds text, screenshots and anonymized reports only. **Revit models and Navisworks files are not committed** (they are large and version control gives nothing here); download links are attached separately when needed.
 
-## 这个项目解决什么问题
+## What problem does this project solve
 
-机电协调岗的日常是：把建筑、结构、暖通、给排水、电气五个专业的模型叠在一起，找出**硬碰撞**（管线穿梁、风管穿墙）与**净高不足**，再推动各专业改图。这件事的难点不在软件操作，而在：
+The daily work of an MEP coordination role: overlay the architectural, structural, HVAC, plumbing/drainage and electrical models, find **hard clashes** (pipes through beams, ducts through walls) and **insufficient headroom**, then drive the disciplines to revise their drawings. The difficulty is not in the software operation, it is in:
 
-1. 碰撞数量动辄上千条，怎么分级、怎么去重、怎么分派；
-2. 改完怎么证明改对了（复检），而不是"我看着差不多了"；
-3. 报告要让施工方看得懂——哪一层、哪个轴网、净高多少、建议怎么改。
+1. Clash counts run to the thousands at a time — how to grade them, deduplicate them and assign them;
+2. How to prove a fix is correct afterwards (re-check), rather than "it looks about right to me";
+3. Making the report understandable to the contractor — which floor, which grid, what headroom, and what change is recommended.
 
-本项目用一栋小体量建筑把这三件事完整走一遍，并把方法沉淀成模板。
+This project walks all three through on one small building and distills the method into templates.
 
-## 项目概况（规划）
+## Project overview (planned)
 
-| 项 | 内容 |
+| Item | Content |
 | --- | --- |
-| 建筑类型 | 自选小型公共建筑（社区服务中心 / 小型图书馆一类），2–3 层，建筑面积 3000–5000 m² |
-| 建模深度 | 建筑 LOD300（墙、楼板、门窗、楼梯、房间、标注齐全） |
-| 机电范围 | 暖通（风管、水管）、给排水（给水、排水、消防）、电气（桥架、母线） |
-| 协调工具 | Revit 2020（本项目实际使用版本）+ Navisworks Manage：**未安装**，NWC 导出与碰撞检测在本机不可用 |
-| 交付物 | 建筑模型截图、机电综合模型截图、碰撞检测报告、净高分析图、整改前后对比 |
+| Building type | Self-selected small public building (a community service center / small library, or similar), 2–3 storeys, floor area 3000–5000 m² |
+| Modeling depth | Architecture LOD300 (walls, floors, doors and windows, stairs, rooms and dimensions complete) |
+| MEP scope | HVAC (ducts, water pipes), plumbing and drainage (water supply, drainage, fire protection), electrical (cable trays, busways) |
+| Coordination tools | Revit 2020 (the version actually used on this project) + Navisworks Manage: **not installed**, so NWC export and clash detection are unavailable on this machine |
+| Deliverables | Architectural model screenshots, coordinated MEP model screenshots, clash detection report, headroom analysis drawings, before/after remediation comparisons |
 
-模型来源：**自己从零建**，不使用任何真实项目图纸。参照公开的建筑设计资料与规范尺寸，避免版权与保密问题。
+Model source: **built from scratch**, using no real project drawings. Publicly available architectural design material and standard dimensions are used for reference, avoiding copyright and confidentiality issues.
 
-## 交付物清单
+## Deliverable list
 
-| # | 交付物 | 形式 | 状态 |
+| # | Deliverable | Form | Status |
 | --- | --- | --- | --- |
-| 1 | 项目说明（建筑概况、专业划分、建模标准） | `docs/项目说明.md` | 🟡 初稿 |
-| 2 | 建筑模型 LOD300 | 截图 + 模型说明 | ⬜ 未开始 |
-| 3 | 机电综合模型 | 截图 + 系统说明 | ⬜ 未开始 |
-| 4 | 碰撞检测报告（含分级与整改建议） | `docs/碰撞报告模板.md` 填充实例 + PDF | 🟡 模板已定 |
-| 5 | 净高分析 | 平面图着色 + 统计表 | ⬜ 未开始 |
-| 6 | 整改前后对比 | 截图对照 | ⬜ 未开始 |
-| 7 | 复盘：方法论与踩坑 | `docs/复盘.md` | ⬜ 未开始 |
+| 1 | Project brief (building overview, discipline breakdown, modeling standards) | `docs/project-brief.md` | 🟡 Draft |
+| 2 | Architectural model LOD300 | Screenshots + model notes | ⬜ Not started |
+| 3 | Coordinated MEP model | Screenshots + system notes | ⬜ Not started |
+| 4 | Clash detection report (with grading and remediation recommendations) | Filled instance of `docs/clash-report-template.md` + PDF | 🟡 Template finalized |
+| 5 | Headroom analysis | Colour-coded plans + statistics table | ⬜ Not started |
+| 6 | Before/after remediation comparison | Screenshot pairs | ⬜ Not started |
+| 7 | Retrospective: methodology and lessons learned | `docs/retrospective.md` | ⬜ Not started |
 
-## 协调工作流
+## Coordination workflow
 
 ```
-Revit 建模（建筑 LOD300 / 机电各专业）
-        │  导出 NWC（Navisworks 未安装，此步不可用）
+Revit modeling (architecture LOD300 / MEP disciplines)
+        │  Export NWC (Navisworks not installed, this step unavailable)
         ▼
-Navisworks 整合 → Clash Detective 跑碰撞
-        │  导出 XML/HTML 结果
+Navisworks integration → clash run in Clash Detective
+        │  Export XML/HTML results
         ▼
-分级与去重（硬碰撞 / 净高 / 软碰撞）→ 填报告
-        │  按专业分派
+Grading and dedupe (hard clash / headroom / soft clash) → fill in the report
+        │  Assign by discipline
         ▼
-Revit 修改 → 重新导出 NWC → 复检同一批碰撞
+Revit revisions → re-export NWC → re-check the same clash set
         │
         ▼
-整改前后对比 + 复盘
+Before/after comparison + retrospective
 ```
 
-分级口径（写进报告，避免"全都是一级"）：
+Grading criteria (written into the report so that not everything ends up Grade A):
 
-- **A 级 / 必须改**：管线穿结构梁柱、风管穿防火墙未加防火阀、净高低于规范或业主要求。
-- **B 级 / 应改**：管线交叉但可通过翻弯解决、支吊架空间不足。
-- **C 级 / 可接受**：保温层与桥架表皮接触、软碰撞（间隙在允许误差内）。
+- **Grade A / must fix**: services penetrating structural beams or columns, ducts penetrating a fire-rated wall without a fire damper, headroom below code or client requirement.
+- **Grade B / should fix**: services crossing but resolvable by an offset, insufficient space for supports and hangers.
+- **Grade C / acceptable**: insulation in contact with a cable tray surface, soft clash (clearance within the permitted tolerance).
 
-## 目录结构
+## Directory structure
 
 ```
 bim-coordination-portfolio/
-├─ README.md
+├─ README.md                        # English (default entry)
+├─ README.zh-CN.md                  # Chinese
 ├─ docs/
-│  ├─ 项目说明.md        # 建筑概况、专业范围、建模标准
-│  ├─ 碰撞报告模板.md     # 报告结构与分级口径
-│  └─ 复盘.md            # 方法论与踩坑（待写）
-└─ assets/               # 截图（脱敏后）
+│  ├─ project-brief.md              # building overview, discipline scope, modeling standards (English)
+│  ├─ project-brief.zh-CN.md        # same, Chinese
+│  ├─ clash-report-template.md      # report structure and grading criteria (English)
+│  ├─ clash-report-template.zh-CN.md # same, Chinese
+│  └─ retrospective.md              # methodology and lessons learned (to be written)
+└─ assets/                          # screenshots (anonymized)
 ```
 
-## 进度看板
+## Progress board
 
-- [x] 确定项目定位与交付物清单
-- [x] 碰撞报告模板与分级口径
-- [ ] 选定建筑（做平面方案与层高）
-- [ ] 建筑 LOD300 建模完成
-- [ ] 机电三专业建模完成
-- [ ] 第一轮碰撞检测 + 报告
-- [ ] 整改 + 复检 + 前后对比
-- [ ] 复盘成文
+- [x] Project positioning and deliverable list defined
+- [x] Clash report template and grading criteria
+- [ ] Building selected (floor plans and storey heights)
+- [ ] Architectural LOD300 modeling complete
+- [ ] Three MEP disciplines modeled
+- [ ] First clash detection round + report
+- [ ] Remediation + re-check + before/after comparison
+- [ ] Retrospective written
 
-## 红线
+## Ground rules
 
-- 不使用真实项目图纸、公司图框、内部标准。
-- 截图前清空项目信息（项目名称、单位、作者、路径），模型文件不入库。
-- 报告里的构件 ID 与轴网编号保持与模型一致，便于复现；不复现的截图不算证据。
+- No real project drawings, company title blocks or internal standards.
+- Clear the project information (project name, organization, author, file path) before taking screenshots; model files are not committed.
+- Element IDs and grid numbers in the report stay consistent with the model so that results can be reproduced; a screenshot that cannot be reproduced does not count as evidence.
 
-## 许可
+## License
 
-文档与截图采用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)；如需引用请注明出处。
+Documentation and screenshots are licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); please cite the source when quoting.
